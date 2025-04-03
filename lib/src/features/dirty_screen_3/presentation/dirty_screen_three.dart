@@ -1,3 +1,4 @@
+import 'package:dirty_code/src/features/dirty_screen_3/presentation/alert_box.dart';
 import 'package:flutter/material.dart';
 
 class DirtyScreenThree extends StatelessWidget {
@@ -8,85 +9,29 @@ class DirtyScreenThree extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Dirty Screen #3"),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: Colors.orangeAccent),
-              margin: const EdgeInsets.all(4),
-              padding: const EdgeInsets.all(16.0),
-              child: const Row(
-                children: [
-                  Icon(Icons.warning),
-                  SizedBox(
-                    width: 8,
-                  ),
-                  Text(
-                    'Alert 1',
-                    style: TextStyle(fontSize: 20, color: Colors.white),
-                  )
-                ],
-              ),
+            AlertBox(
+              alertText: 'Alert 1',
+              boxColor: Colors.orangeAccent,
+              alertIcon: Icon(Icons.warning),
             ),
-            Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: Colors.orangeAccent),
-              margin: const EdgeInsets.all(4),
-              padding: const EdgeInsets.all(16.0),
-              child: const Row(
-                children: [
-                  Icon(Icons.warning),
-                  SizedBox(
-                    width: 8,
-                  ),
-                  Text(
-                    'Alert 2',
-                    style: TextStyle(fontSize: 20, color: Colors.white),
-                  )
-                ],
-              ),
+            AlertBox(
+              alertText: 'Alert 2',
+              boxColor: Colors.orangeAccent,
+              alertIcon: Icon(Icons.warning),
             ),
-            Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: Colors.orangeAccent),
-              margin: const EdgeInsets.all(4),
-              padding: const EdgeInsets.all(16.0),
-              child: const Row(
-                children: [
-                  Icon(Icons.warning),
-                  SizedBox(
-                    width: 8,
-                  ),
-                  Text(
-                    'Alert 3',
-                    style: TextStyle(fontSize: 20, color: Colors.white),
-                  )
-                ],
-              ),
+            AlertBox(
+              alertText: 'Alert 3',
+              boxColor: Colors.orangeAccent,
+              alertIcon: Icon(Icons.warning),
             ),
-            Container(
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  color: Colors.orangeAccent),
-              margin: const EdgeInsets.all(4),
-              padding: const EdgeInsets.all(16.0),
-              child: const Row(
-                children: [
-                  Icon(Icons.warning),
-                  SizedBox(
-                    width: 8,
-                  ),
-                  Text(
-                    'Alert 4',
-                    style: TextStyle(fontSize: 20, color: Colors.white),
-                  )
-                ],
-              ),
+            AlertBox(
+              alertText: 'Alert 4',
+              boxColor: Colors.orangeAccent,
+              alertIcon: Icon(Icons.warning),
             ),
           ],
         ),
