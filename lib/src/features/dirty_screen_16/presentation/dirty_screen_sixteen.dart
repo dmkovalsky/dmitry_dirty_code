@@ -1,3 +1,4 @@
+import 'package:dirty_code/src/features/dirty_screen_16/presentation/user_box.dart';
 import 'package:flutter/material.dart';
 
 class DirtyScreenSixteen extends StatelessWidget {
@@ -8,45 +9,29 @@ class DirtyScreenSixteen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Dirty Screen #16"),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            ListTile(
-              leading: const CircleAvatar(
-                backgroundImage: NetworkImage('https://picsum.photos/100'),
-              ),
-              title: const Text('Alice Johnson'),
-              subtitle: const Text('Project Manager'),
-              trailing: const Icon(Icons.arrow_forward),
-              onTap: () {},
+            UserBox(
+              backgroundImageUrl: 'https://picsum.photos/100',
+              name: 'Alice Johnson',
+              position: 'Project Manager',
             ),
-            ListTile(
-              leading: const CircleAvatar(
-                backgroundImage: NetworkImage('https://picsum.photos/101'),
-              ),
-              title: const Text('Bob Smith'),
-              subtitle: const Text('Developer'),
-              trailing: const Icon(Icons.arrow_forward),
-              onTap: () {},
+            UserBox(
+              backgroundImageUrl: 'https://picsum.photos/101',
+              name: 'Bob Smith',
+              position: 'Developer',
             ),
-            ListTile(
-              leading: const CircleAvatar(
-                backgroundImage: NetworkImage('https://picsum.photos/102'),
-              ),
-              title: const Text('Catherine Lee'),
-              subtitle: const Text('Designer'),
-              trailing: const Icon(Icons.arrow_forward),
-              onTap: () {},
+            UserBox(
+              backgroundImageUrl: 'https://picsum.photos/102',
+              name: 'Catherine Lee',
+              position: 'Designer',
             ),
-            ListTile(
-              leading: const CircleAvatar(
-                backgroundImage: NetworkImage('https://picsum.photos/103'),
-              ),
-              title: const Text('David Wilson'),
-              subtitle: const Text('Product Owner'),
-              trailing: const Icon(Icons.arrow_forward),
-              onTap: () {},
+            UserBox(
+              backgroundImageUrl: 'https://picsum.photos/103',
+              name: 'David Wilson',
+              position: 'Product Owner',
             ),
           ],
         ),
