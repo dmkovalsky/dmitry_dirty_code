@@ -1,3 +1,4 @@
+import 'package:dirty_code/src/features/dirty_screen_15/presentation/food_recipe_box.dart';
 import 'package:flutter/material.dart';
 
 class DirtyScreenFifteen extends StatelessWidget {
@@ -8,86 +9,26 @@ class DirtyScreenFifteen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Dirty Screen #15"),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.orange,
-              ),
-              margin: const EdgeInsets.all(4),
-              padding: const EdgeInsets.all(16.0),
-              child: const Column(
-                children: [
-                  Text(
-                    'Spaghetti Bolognese',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 8),
-                  Text('Ingredients: Spaghetti, Beef, Tomato Sauce',
-                      style: TextStyle(fontSize: 18)),
-                ],
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.green,
-              ),
-              margin: const EdgeInsets.all(4),
-              padding: const EdgeInsets.all(16.0),
-              child: const Column(
-                children: [
-                  Text(
-                    'Caesar Salad',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 8),
-                  Text('Ingredients: Lettuce, Croutons, Parmesan',
-                      style: TextStyle(fontSize: 18)),
-                ],
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.red,
-              ),
-              margin: const EdgeInsets.all(4),
-              padding: const EdgeInsets.all(16.0),
-              child: const Column(
-                children: [
-                  Text(
-                    'Margherita Pizza',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 8),
-                  Text('Ingredients: Dough, Tomato, Mozzarella',
-                      style: TextStyle(fontSize: 18)),
-                ],
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.blue,
-              ),
-              margin: const EdgeInsets.all(4),
-              padding: const EdgeInsets.all(16.0),
-              child: const Column(
-                children: [
-                  Text(
-                    'Grilled Chicken',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(height: 8),
-                  Text('Ingredients: Chicken, Spices, Lemon',
-                      style: TextStyle(fontSize: 18)),
-                ],
-              ),
-            ),
+            FoodRecipeBox(
+                recipeTitle: 'Spaghetti Bolognese',
+                ingredients: 'Spaghetti, Beef, Tomato, Sauce',
+                color: Colors.orange),
+            FoodRecipeBox(
+                recipeTitle: 'Caesar Salad',
+                ingredients: 'Lettuce, Croutons, Parmesan',
+                color: Colors.green),
+            FoodRecipeBox(
+                recipeTitle: 'Margherita Pizza',
+                ingredients: 'Dough, Tomato, Mozzarella',
+                color: Colors.red),
+            FoodRecipeBox(
+                recipeTitle: 'Grilled Chicken',
+                ingredients: 'Chicken, Spices, Lemon',
+                color: Colors.blue),
           ],
         ),
       ),
